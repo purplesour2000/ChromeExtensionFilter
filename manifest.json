@@ -1,0 +1,24 @@
+{
+  "manifest_version": 2,
+
+  "name": "Getting started example",
+  "description": "This extension filters things...",
+  "version": "1.0",
+
+  "browser_action": {
+    "default_icon": "icon.png",
+    "default_popup": "popup.html",
+    "default_title": "Click here!"
+  },
+  "permissions": [
+    "*://*.facebook.com/*",
+    "*://facebook.com/*"
+  ],
+  "content_scripts": [
+    {
+      "matches": ["*://*.facebook.com/*", "*://facebook.com/*"],
+      "js": ["filterFeed.js"]
+    }
+  ]
+
+}
